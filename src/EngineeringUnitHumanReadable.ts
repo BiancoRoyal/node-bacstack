@@ -4,9 +4,11 @@ export function getEngineeringUnitHumanReadable(
   engineeringUnit: EngineeringUnits,
   desiredOutput: "readable" | "scientific" = "scientific"
 ): string {
-  return friendlyEngineeringUnits[engineeringUnit][
-    desiredOutput === "readable" ? 0 : 1
-  ];
+  if (friendlyEngineeringUnits[engineeringUnit])
+    return friendlyEngineeringUnits[engineeringUnit][
+      desiredOutput === "readable" ? 0 : 1
+    ];
+  return "";
 }
 
 type ReadbaleUnit = string;

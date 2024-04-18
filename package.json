@@ -1,6 +1,6 @@
 {
   "name": "ts-bacnet",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "The BACnet protocol library written in pure JavaScript.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
