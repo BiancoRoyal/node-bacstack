@@ -10,6 +10,8 @@ describe('bacnet - BVLC layer', () => {
     baBvlc.encode(buffer.buffer, 10, 1482);
     const result = baBvlc.decode(buffer.buffer, 0);
     expect(result).to.deep.equal({
+      net: undefined,
+      adr: undefined,
       len: 4,
       func: 10,
       msgLength: 1482,
@@ -22,6 +24,8 @@ describe('bacnet - BVLC layer', () => {
     baBvlc.encode(buffer.buffer, 4, 1482, '1.2.255.0');
     const result = baBvlc.decode(buffer.buffer, 0);
     expect(result).to.deep.equal({
+      net: 49152,
+      adr: undefined,
       len: 10,
       func: 4,
       msgLength: 1482,
@@ -34,6 +38,8 @@ describe('bacnet - BVLC layer', () => {
     baBvlc.encode(buffer.buffer, 4, 1482, '1.2.255.0:47810');
     const result = baBvlc.decode(buffer.buffer, 0);
     expect(result).to.deep.equal({
+      net: 49664,
+      adr: undefined,
       len: 10,
       func: 4,
       msgLength: 1482,

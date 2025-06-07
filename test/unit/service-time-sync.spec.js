@@ -1,8 +1,8 @@
 'use strict';
 
-const expect      = require('chai').expect;
-const utils       = require('./utils');
-const baServices  = require('../../lib/services');
+const expect = require('chai').expect;
+const utils = require('./utils');
+const baServices = require('../../lib/services');
 
 describe('bacnet - Services layer TimeSync unit', () => {
   it('should successfully encode and decode', () => {
@@ -11,9 +11,10 @@ describe('bacnet - Services layer TimeSync unit', () => {
     date.setMilliseconds(990);
     baServices.timeSync.encode(buffer, date);
     const result = baServices.timeSync.decode(buffer.buffer, 0, buffer.offset);
+    console.log(result);
     delete result.len;
     expect(result).to.deep.equal({
-      value: date
+      value: date,
     });
   });
 });

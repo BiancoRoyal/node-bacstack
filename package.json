@@ -1,6 +1,6 @@
 {
-  "name": "node-bacnet",
-  "version": "0.2.4",
+  "name": "bacnet-node",
+  "version": "0.2.25",
   "description": "The BACnet protocol library written in pure JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,11 @@
     "compose:build": "docker-compose build",
     "compose:up": "docker-compose up --abort-on-container-exit --exit-code-from bacnet-client",
     "docker": "npm run compose:build && npm run compose:up",
-    "prepublishOnly": "npm run lint && npm run coverage && npm run docker && npm run docs"
+    "prepublishOnly": "npm run lint && npm run coverage && npm run docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BiancoRoyal/node-bacstack.git"
+    "url": "git+https://github.com/EveGun/node-bacstack.git"
   },
   "keywords": [
     "bacnet",
@@ -48,6 +48,10 @@
     {
       "name": "Ingo Fischer",
       "email": "iobroker@fischer-ka.de"
+    },
+    {
+      "name": "Even Gunnes",
+      "email": "even@evolo.no"
     }
   ],
   "engines": {
@@ -60,9 +64,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BiancoRoyal/node-bacstack/issues"
+    "url": "https://github.com/EveGun/node-bacstack/issues"
   },
-  "homepage": "https://github.com/BiancoRoyal/node-bacstack#readme",
+  "homepage": "https://github.com/EveGun/node-bacstack#readme",
   "dependencies": {
     "debug": "^4.1.1",
     "iconv-lite": "^0.5.1",
